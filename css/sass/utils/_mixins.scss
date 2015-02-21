@@ -1,0 +1,77 @@
+//
+//_mixins.scss - Mixin declarations.
+//
+
+//rem font size conversion, with px fallback
+//@include font-size(12px);
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
+}
+
+//fonts
+//@include font(helvetica);
+@mixin font($font, $style: normal, $weight: normal) {
+    font-family: $font, arial, sans-serif;
+    font-style: $style;
+    font-weight: $weight;
+}
+
+//box-sizing
+//@include box-sizing(border-box);
+@mixin box-sizing($box-model) {
+        -webkit-box-sizing: $box-model;
+        -moz-box-sizing: $box-model; 
+    box-sizing: $box-model;
+}
+
+//clearfix
+//@inlude clearfix();
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+//vendor prefixes
+//@include vendor(border-radius, 2px);
+@mixin vendor($property, $value...){
+        -webkit-#{$property}:$value;
+        -moz-#{$property}:$value;
+        -ms-#{$property}:$value;
+        -o-#{$property}:$value;
+    #{$property}:$value;
+}
+
+//transitions
+//@include transition(color .3s ease);
+@mixin transition($args...) {
+        -webkit-transition: $args;
+        -moz-transition: $args;
+        -ms-transition: $args;
+        -o-transition: $args;
+    transition: $args;
+}
+
+//vertial linear gradients
+//@include vert-linear-gradient(#cccccc, #666666);
+@mixin vert-linear-gradient($top, $bottom){
+    background: $top;
+        background: -moz-linear-gradient(top,  $top 0%, $bottom 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom));
+        background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%);
+        background: -o-linear-gradient(top,  $top 0%,$bottom 100%);
+        background: -ms-linear-gradient(top,  $top 0%,$bottom 100%);
+        background: linear-gradient(to bottom,  $top 0%,$bottom 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$top', endColorstr='$bottom',GradientType=0 );
+}

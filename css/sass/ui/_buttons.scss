@@ -1,0 +1,60 @@
+//
+//_buttons.scss - Button declarations.
+//
+
+button {
+
+	&:hover {
+		
+	}
+}
+//<button class="btn btn--main btn--lg"></button>
+.btn {
+	display: inline-block;
+	cursor: pointer;
+	padding: $btn-top-padding $btn-side-padding;
+	text-align: center;
+	border-radius: $border-radius;
+	border: #{$btn-border-size} solid transparent;
+	&:hover {
+		opacity: 0.8;
+	}
+	&--main {
+		background: $main-color;
+		color: $alt-color;
+		border-color: darken($main-color, 15%);
+		&-ghost{
+			background: transparent;
+			color: $main-color;
+			border-color: $main-color;
+		}
+	}
+	&--alt {
+		background: $alt-color;
+		color: $main-color;
+		border-color: darken($alt-color, 15%);
+		&-ghost {
+			background: transparent;
+			color: $alt-color;
+			border-color: $alt-color;
+		}
+	}
+	&--success {
+		$success-bg: #2ECC40;
+		background: $success-bg;
+		color: #fff;
+		border-color: darken($success-bg, 15%);
+	}
+	&--warn {
+		$warn-bg: #FF4136;
+		background: $warn-bg;
+		color: #fff;
+		border-color: darken($warn-bg, 15%);
+	}
+	&--sm {
+		padding: $btn-top-padding / 2 $btn-side-padding / 2;
+	}
+	&--lg {
+		padding: $btn-top-padding * 2 $btn-side-padding * 2;
+	}
+}

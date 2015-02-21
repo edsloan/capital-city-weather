@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="css/g.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+
+	<script type="text/javascript" src="js/header.js"></script>
+</head>
+<body>
+<div class="r pin-bg">
+	<div class="g">
+		<p style="text-align:center;">Click to Pin/Un-pin</p>
+		<div id="pin">
+			
+		</div>
+	</div>
+</div>
+<div class="g">
+	<div class="r cities">
+		<div class="x12">
+			<h1>Europe</h1>
+		</div>
+		<div class="x2 city london">
+			<a class="pin-link" href="#">
+				<div id="icon-london" class="icon"></div>
+				<p>London: <span id="temp-london" class="temp"></span></p>
+			</a>
+		</div>
+		<div class="x2 city paris">
+			<div id="icon-paris" class="icon"></div>
+			<p>Paris: <span id="temp-paris" class="temp"></span></p>
+		</div>
+		<div class="x2 city madrid">
+			<div id="icon-madrid" class="icon"></div>
+			<p>Madrid: <span id="temp-madrid" class="temp"></span></p>
+		</div>
+		<div class="x2 city cairo">
+			<div id="icon-cairo" class="icon"></div>
+			<p>Cairo: <span id="temp-cairo" class="temp"></span></p>
+		</div>
+		<div class="x2 city toronto">
+			<div id="icon-toronto" class="icon"></div>
+			<p>Toronto: <span id="temp-toronto" class="temp"></span></p>
+		</div>
+		<div class="x2 city tokyo">
+			<div id="icon-tokyo" class="icon"></div>
+			<p>Tokyo: <span id="temp-tokyo" class="temp"></span></p>
+		</div>
+		<div class="x2 city sydney">
+			<div id="icon-sydney" class="icon"></div>
+			<p>Sydney: <span id="temp-sydney" class="temp"></span></p>
+		</div>
+		<div class="x2 city amsterdam">
+			<div id="icon-amsterdam" class="icon"></div>
+			<p>Amsterdam: <span id="temp-amsterdam" class="temp"></span></p>
+		</div>
+		<div class="x2 city brussels">
+			<div id="icon-brussels" class="icon"></div>
+			<p>Brussels: <span id="temp-brussels" class="temp"></span></p>
+		</div>
+		<div class="x2 city istanbul">
+			<a class="pin-link" href="#">
+				<div id="icon-istanbul" class="icon"></div>
+				<p>Istanbul: <span id="temp-istanbul" class="temp"></span></p>
+			</a>
+		</div>
+		<div class="x2 city zagreb">
+			<div id="icon-zagreb" class="icon"></div>
+			<p>Zagreb: <span id="temp-zagreb" class="temp"></span></p>
+		</div>
+		<div class="x2 city anadyr">
+			<div id="icon-anadyr" class="icon"></div>
+			<p>Anadyr: <span id="temp-anadyr" class="temp"></span></p>
+		</div>
+	</div>
+</div>
+<div class="r footer">
+	<div class="g">
+		<div id="scales" class="x2">
+			<button id="farenheit">Farenheit</button>
+			<button id="celsius" class="selected" disabled>Celsius</button>
+		</div>
+		<div class="x2">
+			<p>Next Refresh: <span id="countdown">15</span> mins.</p>
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/footer.js"></script>
+<script type="text/javascript">
+  var seconds;
+  var temp;
+ 
+  function countdown() {
+    seconds = document.getElementById('countdown').innerHTML;
+    seconds = parseInt(seconds, 10);
+ 
+    if (seconds == 1) {
+      temp = document.getElementById('countdown');
+      temp.innerHTML = "all done, bye bye";
+      return;
+    }
+ 
+    seconds--;
+    temp = document.getElementById('countdown');
+    temp.innerHTML = seconds;
+    timeoutMyOswego = setTimeout(countdown, 60000);
+  } 
+ 
+  countdown();
+
+</script>
+</body>
+</html>

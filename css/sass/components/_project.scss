@@ -1,0 +1,28 @@
+//
+//_project.scss - Project specific styles.
+//this should be kept as small as possible.
+//
+html {
+	background: #f5f5f5;
+}
+.pin-bg {
+	border-bottom: 2px dashed #aaa;
+}
+.city {
+	border-radius: 10px;
+	padding: 20px 10px;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-family: $alt-font-family;
+	height: 123px;
+	@include vendor(box-shadow, 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12));
+	background: #fff;
+	p {
+		font-weight: bold;
+		font-size: 14px;
+		span {
+			font-weight: normal;
+		}
+	}
+}
