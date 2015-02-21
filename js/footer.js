@@ -5,8 +5,10 @@ function getWeather () {
 		matchCity = $('[class*="city"]');
 
 	scale.on('click', function (){
-		$(this).siblings().removeClass('selected').attr('disabled', false);
-		$(this).addClass('selected').attr('disabled', true);
+		var self = $(this);
+
+		self.siblings().removeClass('selected').attr('disabled', false);
+		self.addClass('selected').attr('disabled', true);
 		getWeather();
 	});
 
@@ -17,7 +19,8 @@ function getWeather () {
 	}
 
 	matchCity.each(function(index, value){
-		var getCity = $(this).attr('class').split(/\s/),
+		var self = $(this),
+			getCity = self.attr('class').split(' '),
 			city = getCity[getCity.length -1];
 
 		$.getJSON('http://api.openweathermap.org/data/2.5/weather?q=' + city + unit, function(json) {
@@ -35,20 +38,20 @@ getWeather();
 function pinToTop () {
 	var pinLink = $('.pin-link'),
 		pin = $('#pin'),
-		pinned = 'pinned',
-		cities = $('.cities');
+		pinned = 'pinned';
 
 	pinLink.each(function() {
-		var self = $(this),
-			findParent = self.parent();
+		var self = $(this);
 
 		self.on('click', function(e){
 			e.preventDefault();
 
-			if (findParent.hasClass(pinned)) {
-				findParent.prependTo(cities).removeClass(pinned);
+			var getContinent = self.attr('class').split(' ')[0];
+
+			if (self.hasClass(pinned)) {
+				self.prependTo('#' + getContinent).removeClass(pinned);
 			} else {
-				findParent.prependTo(pin).addClass(pinned);
+				self.prependTo(pin).addClass(pinned);
 			}
 		});
 	});

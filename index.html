@@ -23,16 +23,18 @@
 	</div>
 </div>
 <div class="g">
-	<div class="r cities">
+	<div class="r">
 		<div class="x12">
 			<h1>Europe</h1>
 		</div>
-		<div class="x2 city london">
-			<a class="pin-link" href="#">
+	</div>
+	<div id="eu" class="r eu">
+		<a class="eu pin-link" href="#">
+			<div class="x2 city london">
 				<div id="icon-london" class="icon"></div>
 				<p>London: <span id="temp-london" class="temp"></span></p>
-			</a>
-		</div>
+			</div>
+		</a>
 		<div class="x2 city paris">
 			<div id="icon-paris" class="icon"></div>
 			<p>Paris: <span id="temp-paris" class="temp"></span></p>
@@ -65,12 +67,6 @@
 			<div id="icon-brussels" class="icon"></div>
 			<p>Brussels: <span id="temp-brussels" class="temp"></span></p>
 		</div>
-		<div class="x2 city istanbul">
-			<a class="pin-link" href="#">
-				<div id="icon-istanbul" class="icon"></div>
-				<p>Istanbul: <span id="temp-istanbul" class="temp"></span></p>
-			</a>
-		</div>
 		<div class="x2 city zagreb">
 			<div id="icon-zagreb" class="icon"></div>
 			<p>Zagreb: <span id="temp-zagreb" class="temp"></span></p>
@@ -80,14 +76,29 @@
 			<p>Anadyr: <span id="temp-anadyr" class="temp"></span></p>
 		</div>
 	</div>
+
+	<div class="r">
+		<div class="x12">
+			<h1>Africa</h1>
+		</div>
+	</div>
+
+	<div id="af" class="r">
+		<a class="af pin-link" href="#">
+			<div class="x2 city istanbul">
+				<div id="icon-istanbul" class="icon"></div>
+				<p>Istanbul: <span id="temp-istanbul" class="temp"></span></p>
+			</div>
+		</a>
+	</div>
 </div>
 <div class="r footer">
 	<div class="g">
-		<div id="scales" class="x2">
-			<button id="farenheit">Farenheit</button>
-			<button id="celsius" class="selected" disabled>Celsius</button>
+		<div id="scales" class="x3">
+			<button id="farenheit" class="btn btn--main">Farenheit</button>
+			<button id="celsius" class="btn btn--main selected" disabled>Celsius</button>
 		</div>
-		<div class="x2">
+		<div class="x3">
 			<p>Next Refresh: <span id="countdown">15</span> mins.</p>
 		</div>
 	</div>

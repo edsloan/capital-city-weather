@@ -61,6 +61,7 @@ html {
 
 a {
   text-decoration: none;
+  color: #111111;
 }
 a:visited {
   color: #111111;
