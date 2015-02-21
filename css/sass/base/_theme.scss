@@ -10,7 +10,7 @@ $alt-color: #ccc;
 $main-bg-color: #eee;
 
 //fonts
-$main-font-family: 'open-sans', arial, sans-serif;
+$main-font-family: arial, sans-serif;
 $main-font-color: $main-color;
 $main-font-size: 12px;
 
@@ -34,14 +34,14 @@ $small-breakpoint: "(max-width: 767px)";
 //external fonts (commented out until needed)
 //requires the font name to be the same as the file name(s)
 //works with @include font(open-sans-webfont); (found in _mixins.scss)
-@each $font-face in 'open-sans' {
-    @font-face {
-      	font-family: $font-face; font-style: normal; font-weight: normal;
+//@each $font-face in 'open-sans' {
+//    @font-face {
+//      	font-family: $font-face; font-style: normal; font-weight: normal;
 //       	src: url('../fonts/#{$font-face}.eot');
 //       	src: url('../fonts/#{$font-face}.eot?') format('eot');
 //          src: url('../fonts/#{$font-face}.ttf') format('truetype');
 //          src: url('../fonts/#{$font-face}.svg') format('svg');
-           	src: url('../fonts/#{$font-face}.woff') format('woff');
-
-    }
-}
+//           	src: url('../fonts/#{$font-face}.woff') format('woff');
+//
+//    }
+//}

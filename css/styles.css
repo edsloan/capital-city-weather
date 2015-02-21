@@ -1,10 +1,4 @@
 /*! SassBase - v1.2.2 | MIT | @edsloandev */
-@font-face {
-  font-family: "open-sans";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/open-sans.woff") format("woff");
-}
 *,
 *:after,
 *:before {
@@ -48,7 +42,7 @@ input, textarea, select {
 }
 
 html {
-  font-family: "open-sans", arial, sans-serif;
+  font-family: arial, sans-serif;
   color: #111111;
   font-size: 12px;
   font-size: 0.75rem;
