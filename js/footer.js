@@ -2,7 +2,7 @@ function getWeather() {
 
 	var scale = $('#scales button'),
 		farenheit = $('#farenheit'),
-		matchCity = $('[class*="city"]');
+		getCity = $('[class*="city"]');
 
 	scale.on('click', function() {
 		var self = $(this);
@@ -18,16 +18,18 @@ function getWeather() {
 		var unit = "&units=metric";
 	}
 
-	matchCity.each(function() {
+	getCity.each(function() {
 		var self = $(this),
-			city = self.attr('class').split(' ')[2];
+			city = self.attr('class').split(' ')[2],
+			cityTemp = $('#temp-' + city),
+			cityIcon = $('#icon-' + city);
 
 		$.getJSON('http://api.openweathermap.org/data/2.5/weather?q=' + city + unit, function(json) {
 			var weather = Math.round(json.main.temp),
 				icon = (json.weather[0].icon);
 
-			$('#temp-' + city).text(weather);
-			$('#icon-' + city).addClass(icon);
+			cityTemp.text(weather);
+			cityIcon.addClass(icon);
 		});
 	});
 }

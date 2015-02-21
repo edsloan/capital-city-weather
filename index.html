@@ -108,27 +108,28 @@
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/footer.js"></script>
 <script type="text/javascript">
-  var seconds;
-  var temp;
- 
-  function countdown() {
-    seconds = document.getElementById('countdown').innerHTML;
-    seconds = parseInt(seconds, 10);
- 
-    if (seconds == 1) {
-      temp = document.getElementById('countdown');
-      temp.innerHTML = "all done, bye bye";
-      return;
-    }
- 
-    seconds--;
-    temp = document.getElementById('countdown');
-    temp.innerHTML = seconds;
-    timeoutMyOswego = setTimeout(countdown, 60000);
-  } 
- 
-  countdown();
+(function() {
+	var mins;
+	var temp;
 
+	function countdown() {
+	    mins = document.getElementById('countdown').innerHTML;
+	    mins = parseInt(mins, 10);
+	 
+	    if (mins == 1) {
+			temp = document.getElementById('countdown');
+			temp.innerHTML = "all done, bye bye";
+			return;
+	    }
+	 
+	    mins--;
+	    temp = document.getElementById('countdown');
+	    temp.innerHTML = mins;
+	    timeoutMyOswego = setTimeout(countdown, 60000);
+	} 
+	 
+	countdown();
+})();
 </script>
 </body>
 </html>
