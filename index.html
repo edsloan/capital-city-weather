@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Capital City Weather</title>
 	<meta charset="utf-8">
 	<meta name="keywords" content="">
 	<meta name="description" content="">
@@ -16,13 +16,14 @@
 <body>
 <div class="r pin-bg">
 	<div class="g">
-		<p style="text-align:center;">Click to Pin/Un-pin</p>
+		<p>Click to Pin/Un-pin</p>
 		<div id="pin">
 			
 		</div>
 	</div>
 </div>
 <div class="g">
+
 	<div class="r">
 		<div class="x12">
 			<h1>Europe</h1>
@@ -43,22 +44,6 @@
 			<div id="icon-madrid" class="icon"></div>
 			<p>Madrid: <span id="temp-madrid" class="temp"></span></p>
 		</div>
-		<div class="x2 city cairo">
-			<div id="icon-cairo" class="icon"></div>
-			<p>Cairo: <span id="temp-cairo" class="temp"></span></p>
-		</div>
-		<div class="x2 city ottawa">
-			<div id="icon-ottawa" class="icon"></div>
-			<p>Ottawa: <span id="temp-ottawa" class="temp"></span></p>
-		</div>
-		<div class="x2 city tokyo">
-			<div id="icon-tokyo" class="icon"></div>
-			<p>Tokyo: <span id="temp-tokyo" class="temp"></span></p>
-		</div>
-		<div class="x2 city canberra">
-			<div id="icon-canberra" class="icon"></div>
-			<p>Canberra: <span id="temp-canberra" class="temp"></span></p>
-		</div>
 		<div class="x2 city amsterdam">
 			<div id="icon-amsterdam" class="icon"></div>
 			<p>Amsterdam: <span id="temp-amsterdam" class="temp"></span></p>
@@ -77,26 +62,96 @@
 		</div>
 	</div>
 
+
+	<div class="r">
+		<div class="x12">
+			<h1>North America</h1>
+		</div>
+	</div>
+	<div id="na" class="r">
+		<a class="na pin-link" href="#">
+			<div class="x2 city ottawa">
+				<div id="icon-ottawa" class="icon"></div>
+				<p>Ottawa: <span id="temp-ottawa" class="temp"></span></p>
+			</div>
+		</a>
+	</div>
+
+
 	<div class="r">
 		<div class="x12">
 			<h1>Africa</h1>
 		</div>
 	</div>
-
 	<div id="af" class="r">
 		<a class="af pin-link" href="#">
+			<div class="x2 city cairo">
+				<div id="icon-cairo" class="icon"></div>
+				<p>Cairo: <span id="temp-cairo" class="temp"></span></p>
+			</div>
+		</a>
+		<a class="af pin-link" href="#">
+			<div class="x2 city algiers">
+				<div id="icon-algiers" class="icon"></div>
+				<p>Algiers: <span id="temp-algiers" class="temp"></span></p>
+			</div>
+		</a>
+	</div>
+
+
+	<div class="r">
+		<div class="x12">
+			<h1>Asia</h1>
+		</div>
+	</div>
+	<div id="as" class="r">
+		<a class="as pin-link" href="#">
 			<div class="x2 city istanbul">
 				<div id="icon-istanbul" class="icon"></div>
 				<p>Istanbul: <span id="temp-istanbul" class="temp"></span></p>
 			</div>
 		</a>
+		<a class="as pin-link" href="#">
+			<div class="x2 city manila">
+				<div id="icon-manila" class="icon"></div>
+				<p>Manila: <span id="temp-manila" class="temp"></span></p>
+			</div>
+		</a>
+		<a class="as pin-link" href="#">
+			<div class="x2 city pyongyang">
+				<div id="icon-pyongyang" class="icon"></div>
+				<p>Pyongyang: <span id="temp-pyongyang" class="temp"></span></p>
+			</div>
+		</a>
+		<a class="as pin-link" href="#">
+			<div class="x2 city tokyo">
+				<div id="icon-tokyo" class="icon"></div>
+				<p>Tokyo: <span id="temp-tokyo" class="temp"></span></p>
+			</div>
+		</a>
 	</div>
+
+
+	<div class="r">
+		<div class="x12">
+			<h1>Australasia</h1>
+		</div>
+	</div>
+	<div id="au" class="r">
+		<a class="au pin-link" href="#">
+			<div class="x2 city canberra">
+				<div id="icon-canberra" class="icon"></div>
+				<p>Canberra: <span id="temp-canberra" class="temp"></span></p>
+			</div>
+		</a>
+	</div>
+
 </div>
 <div class="r footer">
 	<div class="g">
 		<div id="scales" class="x3">
-			<button id="farenheit" class="btn btn--main">Farenheit</button>
-			<button id="celsius" class="btn btn--main selected" disabled>Celsius</button>
+			<button id="farenheit" class="btn btn--main-ghost">Farenheit</button>
+			<button id="celsius" class="btn btn--main-ghost selected" disabled>Celsius</button>
 		</div>
 		<div class="x3">
 			<p>Next Refresh: <span id="countdown">15</span> mins.</p>

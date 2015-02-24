@@ -42,8 +42,8 @@ input, textarea, select {
 }
 
 html {
-  font-family: arial, sans-serif;
-  color: #111111;
+  font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
+  color: #111;
   font-size: 12px;
   font-size: 0.75rem;
   -webkit-text-size-adjust: 100%;
@@ -53,12 +53,16 @@ html {
   text-size-adjust: 100%;
 }
 
+html, body {
+  height: 100%;
+}
+
 a {
   text-decoration: none;
-  color: #111111;
+  color: #111;
 }
 a:visited {
-  color: #111111;
+  color: #111;
 }
 
 .btn {
@@ -73,32 +77,32 @@ a:visited {
   opacity: 0.8;
 }
 .btn--main {
-  background: #111111;
-  color: #cccccc;
+  background: #111;
+  color: #ccc;
   border-color: black;
 }
 .btn--main-ghost {
   background: transparent;
-  color: #111111;
-  border-color: #111111;
+  color: #111;
+  border-color: #111;
 }
 .btn--alt {
-  background: #cccccc;
-  color: #111111;
+  background: #ccc;
+  color: #111;
   border-color: #a6a6a6;
 }
 .btn--alt-ghost {
   background: transparent;
-  color: #cccccc;
-  border-color: #cccccc;
+  color: #ccc;
+  border-color: #ccc;
 }
 .btn--success {
-  background: #2ecc40;
+  background: #2ECC40;
   color: #fff;
   border-color: #208e2c;
 }
 .btn--warn {
-  background: #ff4136;
+  background: #FF4136;
   color: #fff;
   border-color: #e90d00;
 }
@@ -116,14 +120,21 @@ html {
 .pin-bg {
   border-bottom: 2px dashed #aaa;
 }
+.pin-bg p {
+  text-align: center;
+  margin: 8px 0;
+}
+
+h1 {
+  text-transform: uppercase;
+}
 
 .city {
   border-radius: 10px;
   padding: 20px 10px;
   text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-family: verdana, sans-serif;
+  margin-bottom: 32px;
+  font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
   height: 123px;
   -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
@@ -138,6 +149,20 @@ html {
 }
 .city p span {
   font-weight: normal;
+}
+
+.footer {
+  background: white;
+  padding: 10px 0;
+}
+.footer button:disabled {
+  background: #ccc;
+  opacity: 0.2;
+  border-color: #ccc;
+}
+.footer button:disabled:hover {
+  cursor: auto;
+  opacity: 0.2;
 }
 
 .icon {
@@ -221,3 +246,21 @@ html {
 .\35 0n {
   background-position: -245px -65px;
 }
+
+@media (max-width: 767px) {
+  .city {
+    width: 23%;
+  }
+}
+@media (max-width: 600px) {
+  .city {
+    width: 31.33333333%;
+  }
+}
+@media (max-width: 450px) {
+  .city {
+    width: 48%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

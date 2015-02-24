@@ -5,12 +5,23 @@
 
 //large
 @media #{$large-breakpoint} {
-    
+    .city {
+    	width: 23%;
+    }
 
 }
 
 //small
 @media #{$small-breakpoint} {
-    
+	.city {
+		width: 31.33333333%;
+	}
 
+}
+
+//supersmall
+@media #{$supersmall-breakpoint} {
+	.city {
+		width: 48%;
+	}
 }

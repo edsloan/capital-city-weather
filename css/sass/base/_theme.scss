@@ -7,14 +7,14 @@
 $main-color: #111;
 $alt-color: #ccc;
 
-$main-bg-color: #eee;
+$main-bg-color: #f5f5f5;
 
 //fonts
-$main-font-family: arial, sans-serif;
+$main-font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
 $main-font-color: $main-color;
 $main-font-size: 12px;
 
-$alt-font-family: verdana, sans-serif;
+$alt-font-family: arial, sans-serif;
 $alt-font-color: $alt-color;
 $alt-font-size: 14px;
 
@@ -28,8 +28,9 @@ $btn-side-padding: 12px;
 $btn-border-size: 2px;
 
 //breakpoints - populated in _breakpoints.scss
-$large-breakpoint: "(max-width: 1024px)";
-$small-breakpoint: "(max-width: 767px)";
+$large-breakpoint: "(max-width: 767px)";
+$small-breakpoint: "(max-width: 600px)";
+$supersmall-breakpoint: "(max-width: 450px)";
 
 //external fonts (commented out until needed)
 //requires the font name to be the same as the file name(s)

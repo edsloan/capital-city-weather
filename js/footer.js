@@ -1,5 +1,10 @@
 function getWeather() {
 
+	var p = document.getElementById('pin');
+	if(localStorage && localStorage.getItem('state')){
+		p.innerHTML = JSON.parse(localStorage.getItem('state'));
+	}
+
 	var scale = $('#scales button'),
 		farenheit = $('#farenheit'),
 		getCity = $('[class*="city"]');
@@ -24,6 +29,10 @@ function getWeather() {
 			cityTemp = $('#temp-' + city),
 			cityIcon = $('#icon-' + city);
 
+		if ($('.' + city).length > 1) {
+			$('.' + city).not(':first').remove();
+		}
+
 		$.getJSON('http://api.openweathermap.org/data/2.5/weather?q=' + city + unit, function(json) {
 			var weather = Math.round(json.main.temp),
 				icon = (json.weather[0].icon);
@@ -35,6 +44,7 @@ function getWeather() {
 }
 setInterval(getWeather, 900000);
 getWeather();
+
 
 function pinToTop() {
 	var pinLink = $('.pin-link'),
@@ -54,6 +64,8 @@ function pinToTop() {
 			} else {
 				self.prependTo(pin).addClass(pinned);
 			}
+
+			localStorage.setItem('state', JSON.stringify(pin.html()));
 		});
 	});
 }
