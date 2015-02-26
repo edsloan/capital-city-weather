@@ -16,7 +16,19 @@
 <body>
 <div class="r pin-bg">
 	<div class="g">
-		<h3>Click to Pin/Un-pin</h3>
+		<header class="head r">
+			<div id="scales" class="x4 scales">
+				<button id="farenheit" class="btn btn--sm btn--main-ghost">&deg;F</button>
+				<button id="celsius" class="btn btn--sm btn--main-ghost selected" disabled>&deg;C</button>
+			</div>
+			<div class="x4">
+				<h3>Click to Pin/Un-pin</h3>
+			</div>
+			<div class="x4">
+				<p>Refresh: <span id="countdown">15</span> mins.</p>
+			</div>
+		</header>
+
 		<div id="pin">
 			
 		</div>
@@ -419,9 +431,9 @@
 		    </div>
 		</a>
 		<a class="americas pin-link" href="#">
-		    <div class="x2 city road-town">
-		        <div class="icon" id="icon-road-town"></div>
-		        <p>Road Town: <span class="temp" id="temp-road-town"></span></p>
+		    <div class="x2 city british-virgin-islands">
+		        <div class="icon" id="icon-british-virgin-islands"></div>
+		        <p>Road Town: <span class="temp" id="temp-british-virgin-islands"></span></p>
 		    </div>
 		</a>
 		<a class="americas pin-link" href="#">
@@ -1558,15 +1570,9 @@
 
 <div class="r footer">
 	<div class="g">
-		<div id="scales" class="x3">
-			<button id="farenheit" class="btn btn--main-ghost">Farenheit</button>
-			<button id="celsius" class="btn btn--main-ghost selected" disabled>Celsius</button>
-		</div>
-		<div class="x3">
-			<p>Next Refresh: <span id="countdown">15</span> mins.</p>
-		</div>
-		<div class="x3">
-			
+		<div class="x12">
+			<a href="https://github.com/edsloan/capital-city-weather" title="Project link">Github project</a> -
+			<span><a href="https://twitter.com/edsloandev" title="">Ed Sloan</a> 2015</span> 
 		</div>
 	</div>
 </div>

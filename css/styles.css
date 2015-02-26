@@ -120,17 +120,39 @@ a:visited {
 
 .pin-bg {
   border-bottom: 2px dashed #aaa;
+  margin-bottom: 20px;
 }
-.pin-bg h3 {
+
+.head {
+  padding: 8px 0;
+}
+.head .scales {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.head h3 {
   text-align: center;
   margin: 8px 0;
+}
+.head p {
+  margin: 8px 0;
+  text-align: right;
+}
+.head button:disabled {
+  background: #ccc;
+  opacity: 0.2;
+  border-color: #ccc;
+}
+.head button:disabled:hover {
+  cursor: auto;
+  opacity: 0.2;
 }
 
 .city {
   border-radius: 12px;
   padding: 16px 8px;
   text-align: center;
-  margin-bottom: 32px;
+  margin-bottom: 26px;
   height: 113px;
   -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
@@ -149,20 +171,11 @@ a:visited {
 
 .footer {
   background: #fff;
-  padding: 10px 0;
-  height: 49px;
+  padding: 8px 0;
+  text-align: center;
 }
-.footer button:disabled {
-  background: #ccc;
-  opacity: 0.2;
-  border-color: #ccc;
-}
-.footer button:disabled:hover {
-  cursor: auto;
-  opacity: 0.2;
-}
-.footer p {
-  line-height: 24.5px;
+.footer a {
+  text-decoration: underline;
 }
 
 .icon {
@@ -253,7 +266,8 @@ a:visited {
   }
 }
 @media (max-width: 600px) {
-  .city {
+  .city,
+  .head .x4 {
     width: 31.33333333%;
   }
 

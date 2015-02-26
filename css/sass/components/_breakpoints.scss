@@ -13,7 +13,8 @@
 
 //small
 @media #{$small-breakpoint} {
-	.city {
+	.city,
+	.head .x4 {
 		width: 31.33333333%;
 	}
 	.footer {
