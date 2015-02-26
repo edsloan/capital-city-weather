@@ -8,6 +8,7 @@ $main-color: #111;
 $alt-color: #ccc;
 
 $main-bg-color: #f5f5f5;
+$alt-bg-color: #fff;
 
 //fonts
 $main-font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
@@ -19,13 +20,14 @@ $alt-font-color: $alt-color;
 $alt-font-size: 14px;
 
 //layout
-$border-radius: 5px;
+$border-radius: 12px;
 $section-spacing: 2%;
 
 //buttons
 $btn-top-padding: 6px;
 $btn-side-padding: 12px;
 $btn-border-size: 2px;
+$btn-border-radius: 6px;
 
 //breakpoints - populated in _breakpoints.scss
 $large-breakpoint: "(max-width: 767px)";

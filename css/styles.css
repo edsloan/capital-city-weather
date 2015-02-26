@@ -51,10 +51,15 @@ html {
   -ms-text-size-adjust: 100%;
   -o-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  background: #f5f5f5;
 }
 
 html, body {
   height: 100%;
+}
+
+h1, .aplha {
+  text-transform: uppercase;
 }
 
 a {
@@ -70,7 +75,7 @@ a:visited {
   cursor: pointer;
   padding: 6px 12px;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 6px;
   border: 2px solid transparent;
 }
 .btn:hover {
@@ -113,29 +118,20 @@ a:visited {
   padding: 12px 24px;
 }
 
-html {
-  background: #f5f5f5;
-}
-
 .pin-bg {
   border-bottom: 2px dashed #aaa;
 }
-.pin-bg p {
+.pin-bg h3 {
   text-align: center;
   margin: 8px 0;
 }
 
-h1 {
-  text-transform: uppercase;
-}
-
 .city {
-  border-radius: 10px;
-  padding: 20px 10px;
+  border-radius: 12px;
+  padding: 16px 8px;
   text-align: center;
   margin-bottom: 32px;
-  font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
-  height: 123px;
+  height: 113px;
   -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   -ms-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
@@ -147,13 +143,14 @@ h1 {
   font-weight: bold;
   font-size: 14px;
 }
-.city p span {
+.city span {
   font-weight: normal;
 }
 
 .footer {
-  background: white;
+  background: #fff;
   padding: 10px 0;
+  height: 49px;
 }
 .footer button:disabled {
   background: #ccc;
@@ -163,6 +160,9 @@ h1 {
 .footer button:disabled:hover {
   cursor: auto;
   opacity: 0.2;
+}
+.footer p {
+  line-height: 24.5px;
 }
 
 .icon {
@@ -255,6 +255,11 @@ h1 {
 @media (max-width: 600px) {
   .city {
     width: 31.33333333%;
+  }
+
+  .footer {
+    text-align: center;
+    height: auto;
   }
 }
 @media (max-width: 450px) {

@@ -2,54 +2,55 @@
 //_project.scss - Project specific styles.
 //this should be kept as small as possible.
 //
-html {
-	background: $main-bg-color;
-}
+
+//vars
+$button-disabled-bg: #ccc;
+$footer-height: 49px;
 
 
 //pins
 .pin-bg {
 	border-bottom: 2px dashed #aaa;
-	p {
+	h3 {
 		text-align: center;
 		margin: 8px 0;
 	}
 }
 
 //cities
-h1 {
-	text-transform: uppercase;
-}
 .city {
-	border-radius: 10px;
-	padding: 20px 10px;
+	border-radius: $border-radius;
+	padding: 16px 8px;
 	text-align: center;
 	margin-bottom: 32px;
-	font-family: $main-font-family;
-	height: 123px;
+	height: 113px;
 	@include vendor(box-shadow, 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12));
 	background: #fff;
 	p {
 		font-weight: bold;
-		font-size: 14px;
-		span {
-			font-weight: normal;
-		}
+		font-size: $alt-font-size;
+	}
+	span {
+		font-weight: normal;
 	}
 }
 
 
 //footer
 .footer {
-	background: white;
+	background: $alt-bg-color;
 	padding: 10px 0;
+	height: $footer-height;
 	button:disabled {
-		background: #ccc;
+		background: $button-disabled-bg;
 		opacity: 0.2;
-		border-color: #ccc;
+		border-color: $button-disabled-bg;
 		&:hover {
 			cursor: auto;
 			opacity: 0.2;
 		}
+	}
+	p {
+		line-height: ($footer-height / 2);
 	}
 }

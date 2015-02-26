@@ -14,7 +14,7 @@ button {
 	cursor: pointer;
 	padding: $btn-top-padding $btn-side-padding;
 	text-align: center;
-	border-radius: $border-radius;
+	border-radius: $btn-border-radius;
 	border: #{$btn-border-size} solid transparent;
 	&:hover {
 		opacity: 0.8;
